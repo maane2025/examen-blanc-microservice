@@ -1,0 +1,12 @@
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\dto\KeynoteDTO.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\entity\Conference.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\entity\Review.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\repository\ReviewRepository.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\dto\ConferenceDTO.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\mapper\ConferenceMapper.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\service\ConferenceService.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\dto\ReviewDTO.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\ConferenceServiceApplication.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\controller\ConferenceController.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\repository\ConferenceRepository.java
+C:\Users\PC\Downloads\microservices examen\conference-service\src\main\java\com\example\conferenceservice\client\KeynoteClient.java

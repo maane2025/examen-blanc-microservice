@@ -1,0 +1,27 @@
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">CM</div>
+      <div>
+        <div class="title">Conference Management</div>
+        <div class="subtitle">Gateway: {{ gatewayUrl }}</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+      <a routerLink="/conferences" routerLinkActive="active">Conferences</a>
+      <a routerLink="/keynotes" routerLinkActive="active">Keynotes</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <router-outlet />
+  </main>
+
+  <footer class="footer">
+    <span>Microservices UI</span>
+    <span class="sep">•</span>
+    <a href="http://localhost:8761" target="_blank" rel="noopener">Eureka</a>
+  </footer>
+</div>

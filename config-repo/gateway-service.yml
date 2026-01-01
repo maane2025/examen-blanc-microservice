@@ -1,0 +1,22 @@
+server:
+  port: 9090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: keynote-service
+          uri: lb://keynote-service
+          predicates:
+            - Path=/api/keynotes/**
+        - id: conference-service
+          uri: lb://conference-service
+          predicates:
+            - Path=/api/conferences/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost

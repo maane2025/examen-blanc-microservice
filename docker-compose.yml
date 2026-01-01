@@ -1,0 +1,57 @@
+version: '3.8'
+services:
+  config-service:
+    build: ./config-service
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./config-repo:/config-repo
+    environment:
+      - SPRING_PROFILES_ACTIVE=native
+
+  discovery-service:
+    build: ./discovery-service
+    ports:
+      - "8761:8761"
+    depends_on:
+      - config-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  gateway-service:
+    build: ./gateway-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - config-service
+      - discovery-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  keynote-service:
+    build: ./keynote-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - config-service
+      - discovery-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  conference-service:
+    build: ./conference-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - config-service
+      - discovery-service
+      - keynote-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  angular-frontend:
+    build: ./angular-front-app
+    ports:
+      - "4200:80"
+    depends_on:
+      - gateway-service
